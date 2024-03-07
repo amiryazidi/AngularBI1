@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Product } from '../model/product';
 import { ProductService } from '../services/product.service';
 import { CalculService } from '../services/calcul.service';
+import { ConsumerProductService } from '../services/consumer-product.service';
 
 @Component({
   selector: 'app-product',
@@ -9,13 +10,17 @@ import { CalculService } from '../services/calcul.service';
   styleUrls: ['./product.component.css'],
 })
 export class ProductComponent {
-  constructor(private ps:ProductService, private cs:CalculService ){}
+  constructor(private ps:ProductService, private cs:CalculService,private consP:ConsumerProductService ){}
   priceMax!: number;
   alert!:number
   listProduct:Product[]=[]
 
   ngOnInit(){
-    this.listProduct=this.ps.listProduct
+    //this.listProduct=this.ps.listProduct
+    this.consP.getProducts().subscribe({
+      next: (data)=>this.listProduct=data,
+    })
+
     this.alert=this.cs.stat(this.listProduct,'quantity',0)
   }
   increment(id: number) {
@@ -23,5 +28,10 @@ export class ProductComponent {
   }
   buy(id: number) {
     this.listProduct[id].quantity--;
+  }
+  delete(id:number){
+    this.consP.deleteProduct(id).subscribe(
+      ()=>this.ngOnInit()
+    )
   }
 }

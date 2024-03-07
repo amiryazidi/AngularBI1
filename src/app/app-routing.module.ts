@@ -9,6 +9,7 @@ import { AddProductComponent } from './add-product/add-product.component';
 import { ResidenceComponent } from './residence/residence.component';
 import { FormResidenceComponent } from './form-residence/form-residence.component';
 import { AppartementsComponent } from './appartements/appartements.component';
+import { UpdateProductComponent } from './update-product/update-product.component';
 
 const routes: Routes = [
   {path:'home', component:HomeComponent},
@@ -20,6 +21,7 @@ const routes: Routes = [
   {path:'AddResidence', component:FormResidenceComponent},
   {path:'product/:id', component:DetailProductComponent},
   {path:'apartments/:id', component:AppartementsComponent},
+  {path:'updateP/:id', component:UpdateProductComponent},
   {path:'**',component:NotFoundComponent},
 
 

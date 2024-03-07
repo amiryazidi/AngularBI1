@@ -15,7 +15,7 @@ export class DetailProductComponent {
 
   ngOnInit() {
     this.id = this.Act.snapshot.params['id']
-    this.p=this.ps.listProduct[this.id]
+   // this.p=this.ps.listProduct[this.id]
   }
 
 }
