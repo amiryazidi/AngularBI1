@@ -16,6 +16,9 @@ import { FormResidenceComponent } from './form-residence/form-residence.componen
 import { AppartementsComponent } from './appartements/appartements.component';
 import { HttpClientModule } from '@angular/common/http';
 import { UpdateProductComponent } from './update-product/update-product.component';
+import { TvComponent } from './tv/tv.component';
+import { MobileComponent } from './mobile/mobile.component';
+import { CardComponent } from './card/card.component';
 
 
 @NgModule({
@@ -31,7 +34,10 @@ import { UpdateProductComponent } from './update-product/update-product.componen
     ResidenceComponent,
     FormResidenceComponent,
     AppartementsComponent,
-    UpdateProductComponent
+    UpdateProductComponent,
+    TvComponent,
+    MobileComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,

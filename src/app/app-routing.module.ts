@@ -10,6 +10,8 @@ import { ResidenceComponent } from './residence/residence.component';
 import { FormResidenceComponent } from './form-residence/form-residence.component';
 import { AppartementsComponent } from './appartements/appartements.component';
 import { UpdateProductComponent } from './update-product/update-product.component';
+import { TvComponent } from './tv/tv.component';
+import { MobileComponent } from './mobile/mobile.component';
 
 const routes: Routes = [
   {path:'home', component:HomeComponent},
@@ -19,6 +21,8 @@ const routes: Routes = [
   {path:'addProduct', component:AddProductComponent},
   {path:'residence', component:ResidenceComponent},
   {path:'AddResidence', component:FormResidenceComponent},
+  {path:'tv', component:TvComponent},
+  {path:'mobile', component:MobileComponent},
   {path:'product/:id', component:DetailProductComponent},
   {path:'apartments/:id', component:AppartementsComponent},
   {path:'updateP/:id', component:UpdateProductComponent},
